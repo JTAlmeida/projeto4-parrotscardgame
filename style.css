@@ -13,14 +13,18 @@ p {
     color: #75B79E;
     font-size: 56px;
     font-weight: 700;
+    text-align: center;
 }
 .cards {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
+    perspective: 1000px;
 }
 .card {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,12 +35,32 @@ p {
     margin-right: 34px;
     margin-bottom: 34px;
     background-color: #A7E9AF;
+    transform-style: preserve-3d;
+    transition: transform .8s;
 }
+
+.gif{
+    width: 80px;
+    height: 80px;
+}
+
+.back-face {
+    backface-visibility: hidden;
+    position: absolute;
+    transform: rotateY(180deg);
+  }
+
+  .front-face {
+    backface-visibility: hidden;
+  }
+
+  .card.flip{
+    transform: rotateY(180deg);
+  }
 
 @media (max-width:335px){
     p {
         font-size: 36px;
-        text-align: center;
     }
     .cards{
         flex-direction: column;
