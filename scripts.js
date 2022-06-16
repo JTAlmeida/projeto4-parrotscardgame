@@ -1,9 +1,5 @@
 let quantCartas = 0;
 
-function comparador() { 
-	return Math.random() - 0.5; 
-}
-
 function quantidadeCartas(){
   quantCartas = prompt('Com quantas cartas deseja jogar? (4, 6, 8, 10, 12 ou 14)');
 
