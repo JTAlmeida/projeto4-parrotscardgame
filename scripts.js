@@ -4,6 +4,7 @@ let cartaVirada = false;
 let travaCards = false;
 let checaFim = false;
 let cardTemplate = ``;
+let contaTentativas = 0;
 const cartinhas = [ 
     `
     <div class="card match1 check1" data-identifier:"card">
@@ -110,6 +111,7 @@ function embaralha() {
 function travaCard() {
     card1.removeEventListener('click', flip);
     card2.removeEventListener('click', flip);
+    contaTentativas++;
     setTimeout(() => {
         testaFim();
     }, 1000);
@@ -121,6 +123,7 @@ function desviraCard(){
     card1.classList.remove('flip');
     card2.classList.remove('flip');
     card1 = null;
+    contaTentativas++;
     travaCards = false;
 }, 1000);
 }
@@ -136,22 +139,22 @@ let condicao7 = document.querySelector(".check7");
 function testaFim(){
     if (quantCartas==4){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check")){
-            alert("Parabéns, você ganhou!");
+            alert(`Você ganhou em ${contaTentativas} jogadas!`);
     }} else if (quantCartas==6){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check")){
-            alert("Parabéns, você ganhou!"); 
+            alert(`Você ganhou em ${contaTentativas} jogadas!`); 
     }} else if (quantCartas==8){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check") && condicao4.classList.contains("check")){
-            alert("Parabéns, você ganhou!"); 
+            alert(`Você ganhou em ${contaTentativas} jogadas!`); 
     }} else if (quantCartas==10){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check") && condicao4.classList.contains("check") && condicao5.classList.contains("check")){
-            alert("Parabéns, você ganhou!"); 
+            alert(`Você ganhou em ${contaTentativas} jogadas!`); 
     }} else if (quantCartas==12){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check") && condicao4.classList.contains("check") && condicao5.classList.contains("check") && condicao6.classList.contains("check")){
-            alert("Parabéns, você ganhou!"); 
+            alert(`Você ganhou em ${contaTentativas} jogadas!`); 
     }} else if (quantCartas==14){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check") && condicao4.classList.contains("check") && condicao5.classList.contains("check") && condicao6.classList.contains("check") && condicao7.classList.contains("check")){
-            alert("Parabéns, você ganhou!");
+            alert(`Você ganhou em ${contaTentativas} jogadas!`);
         } 
     }
 }
