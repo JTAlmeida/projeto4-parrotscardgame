@@ -139,22 +139,22 @@ let condicao7 = document.querySelector(".check7");
 function testaFim(){
     if (quantCartas==4){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check")){
-            alert(`Você ganhou em ${contaTentativas} jogadas!`);
+            alert(`Você ganhou em ${contaTentativas*2} jogadas!`);
     }} else if (quantCartas==6){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check")){
-            alert(`Você ganhou em ${contaTentativas} jogadas!`); 
+            alert(`Você ganhou em ${contaTentativas*2} jogadas!`);
     }} else if (quantCartas==8){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check") && condicao4.classList.contains("check")){
-            alert(`Você ganhou em ${contaTentativas} jogadas!`); 
+            alert(`Você ganhou em ${contaTentativas*2} jogadas!`);
     }} else if (quantCartas==10){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check") && condicao4.classList.contains("check") && condicao5.classList.contains("check")){
-            alert(`Você ganhou em ${contaTentativas} jogadas!`); 
+            alert(`Você ganhou em ${contaTentativas*2} jogadas!`); 
     }} else if (quantCartas==12){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check") && condicao4.classList.contains("check") && condicao5.classList.contains("check") && condicao6.classList.contains("check")){
-            alert(`Você ganhou em ${contaTentativas} jogadas!`); 
+            alert(`Você ganhou em ${contaTentativas*2} jogadas!`); 
     }} else if (quantCartas==14){
         if ( condicao1.classList.contains("check") && condicao2.classList.contains("check") && condicao3.classList.contains("check") && condicao4.classList.contains("check") && condicao5.classList.contains("check") && condicao6.classList.contains("check") && condicao7.classList.contains("check")){
-            alert(`Você ganhou em ${contaTentativas} jogadas!`);
+            alert(`Você ganhou em ${contaTentativas*2} jogadas!`);
         } 
     }
 }
